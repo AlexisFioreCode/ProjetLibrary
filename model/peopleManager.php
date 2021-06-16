@@ -15,7 +15,7 @@ class PeopleManager {
 
   // Récupère un utilisateur par son id
   public function getUserById() {
-
+    
   }
 
   // Récupère un utilisateur par son code personnel

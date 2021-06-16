@@ -5,11 +5,8 @@ require "model/entity/book.php";
 
 
 $bookManager = new BookManager();
-
-
-
-
-
+$books = new Book();
+$books = $bookManager->getBooks();
 
 
 

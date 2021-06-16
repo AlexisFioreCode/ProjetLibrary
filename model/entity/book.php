@@ -1,6 +1,6 @@
 <?php
 
-require "model/entity/entity.php";
+require_once "model/entity/entity.php";
 // Classe représetant les livres stockés en base de données
 class Book extends Entity {
 
@@ -10,7 +10,7 @@ class Book extends Entity {
     protected string $created_date;
     protected string $category;
     protected bool $borrowed;
-    protected int $people_id;
+    protected ?int $people_id;
 
     
   public function __construct(array $data = null) {
@@ -67,11 +67,15 @@ class Book extends Entity {
         return $this->borrowed;
     }
 
-    public function setPeople_id(int $people_id) {
-        $this->people_id = $people_id;
+    public function setPeople_id($people_id) {
+        if ($people_id) {
+            $this->people_id = $people_id;
+        } else {
+            $this->people_id  = NULL ;
+        }     
     }
 
-    public function getPeople_id():int{
+    public function getPeople_id() {
         return $this->people_id;
     }
 }

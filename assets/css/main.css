@@ -113,6 +113,12 @@ textarea {
     bottom: 0;
     width: 100%;
   }
+  .fa-check-circle {
+    color: lime;
+  }
+  .fa-times-circle {
+     color: red;
+  }
 
 /* ==========================================================================
    Helper classes
