@@ -23,7 +23,7 @@ require "layout/header.php";
         <th scope="row"><?php echo $book->getBook_name(); ?></th>
         <td><?php echo $book->getWriter(); ?></td>
         <td><?php echo $book->getCreated_date(); ?></td>
-        
+        <td><?php echo $book->getCategory(); ?></td>
         <td><?php if ($book->getBorrowed() == "no"): ?>
             <i class="fas fa-check-circle"></i>
             <?php else: ?>

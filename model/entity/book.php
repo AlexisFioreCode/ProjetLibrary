@@ -9,7 +9,7 @@ class Book extends Entity {
     protected string $resume;
     protected string $created_date;
     protected string $category;
-    protected bool $borrowed;
+    protected string $borrowed;
     protected ?int $people_id;
 
     
@@ -59,11 +59,11 @@ class Book extends Entity {
         return $this->category;
     }
 
-    public function setBorrowed(bool $borrowed) {
+    public function setBorrowed(string $borrowed) {
         $this->borrowed = $borrowed;
     }
 
-    public function getBorrowed():bool {
+    public function getBorrowed():string {
         return $this->borrowed;
     }
 

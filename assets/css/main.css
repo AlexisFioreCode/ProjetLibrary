@@ -112,12 +112,21 @@ textarea {
   footer {
     bottom: 0;
     width: 100%;
+    background-color: #635147;
   }
   .fa-check-circle {
     color: lime;
   }
   .fa-times-circle {
      color: red;
+  }
+  .btn-dark {
+    background-color: #8E7567;
+    border-color: #8E7567;
+  }
+  .btn-dark:hover {
+    background-color: #635147;
+    border-color: #635147;
   }
 
 /* ==========================================================================
@@ -208,8 +217,10 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+  footer {
+    position: absolute;
+  }
 }
 
 @media print,
