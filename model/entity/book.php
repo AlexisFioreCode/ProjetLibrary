@@ -1,6 +1,77 @@
 <?php
+
+require "model/entity/entity.php";
 // Classe représetant les livres stockés en base de données
-class Book {
+class Book extends Entity {
 
+    protected string $book_name;
+    protected string $writer;
+    protected string $resume;
+    protected string $created_date;
+    protected string $category;
+    protected bool $borrowed;
+    protected int $people_id;
 
+    
+  public function __construct(array $data = null) {
+    if($data) {
+      $this->hydrate($data);
+    }
+  }
+
+    public function setBook_name(string $book_name) {
+        $this->book_name = $book_name;
+    }
+
+    public function getBook_name():string{
+        return $this->book_name;
+    }
+
+    public function setWriter(string $writer) {
+        $this->writer = $writer;
+    }
+
+    public function getWriter():string {
+        return $this->writer;
+    }
+
+    public function setResume(string $resume) {
+        $this->resume = $resume;
+    }
+
+    public function getResume():string {
+        return $this->resume;
+    }
+
+    public function setCreated_date(string $created_date) {
+        $this->created_date = $created_date;
+    }
+
+    public function getCreated_date():string {
+        return $this->created_date;
+    }
+
+    public function setCategory(string $category) {
+        $this->category = $category;
+    }
+
+    public function getCategory():string {
+        return $this->category;
+    }
+
+    public function setBorrowed(bool $borrowed) {
+        $this->borrowed = $borrowed;
+    }
+
+    public function getBorrowed():bool {
+        return $this->borrowed;
+    }
+
+    public function setPeople_id(int $people_id) {
+        $this->people_id = $people_id;
+    }
+
+    public function getPeople_id():int{
+        return $this->people_id;
+    }
 }
