@@ -12,6 +12,16 @@ if(isset($_GET["index"]) && !empty($_GET["index"])) {
    $book= $bookManager->getBook($_GET["index"]); 
 }
 
+if(!empty($_POST)) {
+   $peopleManager = new PeopleManager;
+   $people = $peopleManager->getPeopleByCard_number($_POST["card_number"]);
+   $result = $bookManager->updateBookStatus("yes" , $people->getId(), $_GET["index"] );
+   if ($result) {
+      header('Location: index.php');
+   }
+}
+
+
 
 require "view/bookView.php";
 ?>

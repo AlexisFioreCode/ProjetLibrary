@@ -54,8 +54,14 @@ class BookManager {
   }
 
   // Met à jour le statut d'un livre emprunté
-  public function updateBookStatus() {
-
+  public function updateBookStatus(string $borrowed , ?int $people_id, int $book_id ) {
+    $query = $this->db->prepare("UPDATE books SET borrowed = :borrowed , people_id = :people_id WHERE id = :book_id ");
+        $result = $query->execute([
+            "borrowed"=> $borrowed,
+            "people_id" => $people_id,
+            "book_id"=> $book_id
+        ]);
+        return $result;
   }
 
   public function deleteBook(int $book_id) {
