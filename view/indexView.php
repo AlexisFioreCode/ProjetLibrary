@@ -30,7 +30,11 @@ require "layout/header.php";
             <i class="fas fa-times-circle"></i>
         <?php endif ?></td>
        <td><a class="btn btn-dark text-white px-5" href="book.php?index=<?php echo $book->getId(); ?>">Voir</a></td> 
+       <?php if ($book->getBorrowed() == "no"): ?>
        <td><a class="btn btn-danger text-white px-5" href="deletebook.php?index=<?php echo $book->getId();?>">Supprimer du catalogue </a></td>
+       <?php else: ?>
+        <td><h5>Impossible le livre est emprunté</h5></td>
+       <?php endif ?>
     </tr>
     <?php endforeach ?>
   </tbody>
