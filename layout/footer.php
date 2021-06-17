@@ -1,5 +1,5 @@
 </main>
-<footer class="bg-dark text-center text-white">
+<footer class="text-center text-white">
       <div class="container p-1">
         <section class="m-2">
           <!-- Facebook -->
