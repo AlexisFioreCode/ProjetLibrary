@@ -89,6 +89,18 @@ textarea {
 
   /* Utilitary classes */
 
+
+  /* Fonts */
+
+  @font-face {
+    font-family: "Parisienne";
+    src: url("/assets/fonts/Parisienne-Regular.ttf") format("ttf");
+   }
+
+   @font-face {
+    font-family: "Allura";
+    src: url("/assets/fonts/Allura-Regular.ttf") format("ttf");
+   }
   /* CSS  */
 
   body{
@@ -100,6 +112,11 @@ textarea {
   }
   h1 {
     margin: 0 auto;
+    font-family: "Allura";
+  }
+
+  h2 {
+    font-family: "Parisienne";
   }
   main {
     min-height: 60vh;
