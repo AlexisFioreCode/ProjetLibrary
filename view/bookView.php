@@ -3,6 +3,7 @@ require "layout/header.php";
 ?>
 
 <a class="btn btn-dark text-white px-5 mb-5" href="index.php">Retour à l'acceuil</a>
+<?php echo $error; ?>
 <?php if(is_array($book)): ?>
 <div class="row">
     <div class="col">
@@ -56,7 +57,7 @@ require "layout/header.php";
         <form action="" method="post">
             <div class="mb-3">
                 <label for="card_number" class="form-label"><h2>N° de carte du client</h2></label>
-                <input type="text" class="form-control" name="card_number" required>
+                <input type="number" class="form-control" name="card_number" required>
             </div>
             <button type="submit" class="btn btn-dark">Louer le livre</button>
         </form> 

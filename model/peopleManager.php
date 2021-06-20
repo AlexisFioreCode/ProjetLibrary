@@ -25,7 +25,13 @@ class PeopleManager {
             "card_number" =>  $card_number
          ]);
         $response = $query->fetch(PDO::FETCH_ASSOC);
-        $result = new People ($response);
-        return $result;  
+        if ($response) {
+          $result = new People($response);
+          return $result;
+        } else {
+          return $response;  
+        }
+        
+        
   }
 }

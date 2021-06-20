@@ -10,7 +10,7 @@ class People extends Entity {
     protected string $adress;
 
     
-    public function __construct(array $data = null) {
+    public function __construct(?array $data = null) {
         if($data) {
         $this->hydrate($data);
         }
